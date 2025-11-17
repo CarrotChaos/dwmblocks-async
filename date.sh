@@ -1,5 +1,4 @@
 #!/bin/sh
-
-date_str=$(date '+%a, %b %d - %I:%M %p')
-printf "󰸗 %s\n" "$date_str"
+# Just print the current time and exit
+printf "󰸗 %s\n" "$(date '+%a, %b %d - %I:%M %p')"
 

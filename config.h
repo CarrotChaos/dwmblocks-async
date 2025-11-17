@@ -22,7 +22,7 @@
     X("", "~/dwmblocks-async/battery.sh", 60, 6) \
     X("", "~/dwmblocks-async/cpu.sh", 5, 7) \
     X("", "~/dwmblocks-async/ram.sh", 5, 8) \
-    X("", "~/dwmblocks-async/date.sh", 1, 0)
+    X("", "~/dwmblocks-async/date.sh", 0, 1)
 
 
 #endif  // CONFIG_H
