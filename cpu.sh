@@ -1,10 +1,19 @@
 #!/bin/sh
 
-# Extract CPU usage percentage from top
-cpuUsage=$(top -bn1 | awk '/Cpu/ {print 100 - $8}')  # subtract idle
-cpuUsage=$(printf "%.0f" "$cpuUsage")  # round to integer
+# Read /proc/stat values
+read cpu user nice system idle iowait irq softirq steal guest guest_nice < /proc/stat
+prev_total=$((user + nice + system + idle + iowait + irq + softirq + steal))
+prev_idle=$idle
 
-icon="󰍛"
+sleep 1
 
-printf "%s %s%%\n" "$icon" "$cpuUsage"
+read cpu user nice system idle iowait irq softirq steal guest guest_nice < /proc/stat
+total=$((user + nice + system + idle + iowait + irq + softirq + steal))
+idle2=$idle
+
+diff_total=$((total - prev_total))
+diff_idle=$((idle2 - prev_idle))
+usage=$(( (100 * (diff_total - diff_idle)) / diff_total ))
+
+printf "󰍛 %d%%\n" "$usage"
 
