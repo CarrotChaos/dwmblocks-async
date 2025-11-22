@@ -18,11 +18,11 @@
 
 // Define blocks for the status feed as X(icon, cmd, interval, signal).
 #define BLOCKS(X) \
-    X("", "~/dwmblocks-async/audio.sh", 0, 10) \
-    X("", "~/dwmblocks-async/battery.sh", 60, 6) \
-    X("", "~/dwmblocks-async/cpu.sh", 5, 7) \
-    X("", "~/dwmblocks-async/ram.sh", 5, 8) \
-    X("", "~/dwmblocks-async/date.sh", 0, 1)
+    X("", "~/scripts/statusbar/audio.sh", 0, 10) \
+    X("", "~/scripts/statusbar/battery.sh", 60, 6) \
+    X("", "~/scripts/statusbar/cpu.sh", 5, 7) \
+    X("", "~/scripts/statusbar/ram.sh", 5, 8) \
+    X("", "~/scripts/statusbar/date.sh", 0, 1)
 
 
 #endif  // CONFIG_H
