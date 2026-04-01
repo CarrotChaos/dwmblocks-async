@@ -21,7 +21,7 @@
     X("", "~/scripts/statusbar/audio.sh", 0, 10) \
     X("", "~/scripts/statusbar/battery.sh", 60, 6) \
     X("", "~/scripts/statusbar/cpu.sh", 5, 7) \
-    X("", "~/scripts/statusbar/ram.sh", 5, 8) \
+    X("", "~/scripts/statusbar/ram2.sh", 5, 8) \
     X("", "~/scripts/statusbar/date.sh", 0, 1)
 
 
