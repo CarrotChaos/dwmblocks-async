@@ -19,9 +19,10 @@
 // Define blocks for the status feed as X(icon, cmd, interval, signal).
 #define BLOCKS(X)                                  \
     X("", "~/scripts/statusbar/audio.sh", 0, 10)   \
-    X("", "~/scripts/statusbar/battery.sh", 60, 6) \
+    X("", "~/scripts/statusbar/battery.sh", 0, 6) \
     X("", "~/scripts/statusbar/cpu.sh", 5, 7)      \
     X("", "~/scripts/statusbar/ram.sh", 5, 8)      \
+    X("", "~/scripts/statusbar/wifi.sh", 30, 2)      \
     X("", "~/scripts/statusbar/date.sh", 0, 1)
 
 #endif  // CONFIG_H
